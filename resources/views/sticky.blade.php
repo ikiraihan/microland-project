@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ultras - Clothing Store eCommerce Store HTML Website Template</title>
+    <title>Microland Computer - Sewa Laptop Surabaya</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
     <!-- JavaScript -->
     <script src="{{ asset('js/modernizr.js') }}"></script>    
@@ -110,7 +111,7 @@
             <div class="row d-flex align-items-center">
               <div class="col-lg-2 col-md-2">
                 <div class="main-logo">
-                  <a href="index.html">
+                  <a href="/">
                     <img src="images/microland.png" alt="logo">
                   </a>
                 </div>
@@ -128,10 +129,13 @@
                           <li><a href="home2.html" class="item-anchor">Home v2<span class="text-primary"> (PRO)</span></a></li>
                         </ul>
                       </li> --}}
-                      <li><a href="index.html" class="item-anchor active">Home</a></li>
-                      <li><a href="about.html" class="item-anchor" data-effect="About">Katalog Perangkat</a></li>
+                      <li><a href="/" class="item-anchor">Home</a></li>
+                      <li><a href="/katalog-perangkat" class="item-anchor" data-effect="About">Katalog Perangkat</a></li>
+                      <li><a href="/tentang-kami" class="item-anchor" data-effect="About">Tentang Kami</a></li>
+                      <li><a href="/ajukan-sewa" class="item-anchor" data-effect="Contact">Ajukan Sewa</a></li>
 
-                      <li class="menu-item has-sub">
+
+                      {{-- <li class="menu-item has-sub">
                         <a href="shop.html" class="item-anchor d-flex align-item-center" data-effect="Shop">Shop<i class="icon icon-chevron-down"></i></a>
                         <ul class="submenu">
                           <li><a href="shop.html" class="item-anchor">Shop</a></li>
@@ -143,9 +147,9 @@
                           <li><a href="wishlist.html" class="item-anchor">Wishlist<span class="text-primary"> (PRO)</span></a></li>
                           <li><a href="checkout.html" class="item-anchor">Checkout<span class="text-primary"> (PRO)</span></a></li>
                         </ul>
-                      </li>
+                      </li> --}}
 
-                      <li class="menu-item has-sub">
+                      {{-- <li class="menu-item has-sub">
                         <a href="#" class="item-anchor d-flex align-item-center" data-effect="Pages">Pages<i class="icon icon-chevron-down"></i></a>
                         <ul class="submenu">
                           <li><a href="coming-soon.html" class="item-anchor">Coming soon<span class="text-primary"> (PRO)</span></a></li>
@@ -165,9 +169,7 @@
                           <li><a href="blog-masonry.html" class="item-anchor">Blog masonry<span class="text-primary"> (PRO)</span></a></li>
                           <li><a href="single-post.html" class="item-anchor">Single post</a></li>
                         </ul>
-                      </li>
-
-                      <li><a href="contact.html" class="item-anchor" data-effect="Contact">Contact</a></li>
+                      </li> --}}
 
                     </ul>
                   </div>
@@ -182,36 +184,64 @@
 
     @yield('content')
 
+    <a href= "/ajukan-sewa" class="sticky-button">
+      <i class="fa fa-comment"></i>
+    </a>    
+
     <footer id="footer">
       <div class="container">
         <div class="footer-menu-list">
           <div class="row d-flex flex-wrap justify-content-between">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-menu">
-                <h5 class="widget-title">Ultras</h5>
+                <img src="images/microland.png" alt="logo">
+                <p>Microland adalah penyedia solusi sewa perangkat IT terpercaya yang berkomitmen untuk memenuhi kebutuhan teknologi Anda dengan cara yang fleksibel, efisien, dan berkualitas.</p>
+                {{-- <div class="social-links">
+                  <ul class="d-flex list-unstyled">
+                    <li>
+                      <a href="#">
+                        <i class="icon icon-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon icon-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon icon-youtube-play"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="icon icon-behance-square"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div> --}}
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="footer-menu">
+                <h5 class="widget-title">Menu</h5>
                 <ul class="menu-list list-unstyled">
                   <li class="menu-item">
-                    <a href="about.html">About us</a>
+                    <a href="/">Home</a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Conditions </a>
+                    <a href="/katalog-perangkat">Katalog Perangkat </a>
                   </li>
                   <li class="menu-item">
-                    <a href="blog.html">Our Journals</a>
+                    <a href="/">Tentang Kami  </a>
                   </li>
                   <li class="menu-item">
-                    <a href="#">Careers</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#">Affiliate Programme</a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#">Ultras Press</a>
+                    <a href="/ajukan-sewa">Ajukan Sewa</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            {{-- <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-menu">
                 <h5 class="widget-title">Customer Service</h5>
                 <ul class="menu-list list-unstyled">
@@ -235,74 +265,86 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> --}}
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-menu">
-                <h5 class="widget-title">Contact Us</h5>
-                <p>Do you have any questions or suggestions? <a href="#" class="email">ourservices@ultras.com</a>
-                </p>
-                <p>Do you need assistance? Give us a call. <br>
-                  <strong>+57 444 11 00 35</strong>
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="footer-menu">
-                <h5 class="widget-title">Forever 2018</h5>
-                <p>Cras mattis sit ornare in metus eu amet adipiscing enim. Ullamcorper in orci, ultrices integer eget arcu. Consectetur leo dignissim lacus, lacus sagittis dictumst.</p>
+                <h5 class="widget-title">Hubungi Kami</h5>
                 <div class="social-links">
                   <ul class="d-flex list-unstyled">
-                    <li>
+                    {{-- <li>
                       <a href="#">
                         <i class="icon icon-facebook"></i>
                       </a>
-                    </li>
+                    </li> --}}
                     <li>
-                      <a href="#">
-                        <i class="icon icon-twitter"></i>
+                      <a href="https://instagram.com/microland_it">
+                        <i class="icon icon-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="icon icon-youtube-play"></i>
+                      <a href="https://wa.me/6287789894922">
+                        <i class="fab fa-whatsapp"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i class="icon icon-behance-square"></i>
+                      <a href="mailto:dito@microland.co.id">
+                        <i class="fa fa-envelope"></i> <!-- Ikon Email dari Font Awesome -->
                       </a>
                     </li>
                   </ul>
                 </div>
+                <!-- Menambahkan Google Maps -->
+                <h5 class="widget-title">Kunjungi Kami</h5>
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.9072713140896!2d112.75125251511656!3d-7.285806194149027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788069450d1951%3A0x7a2b7d836b2d7674!2sJl.%20Ngagel%20Mulyo%20XIV%20No.21%2C%20Ngagelrejo%2C%20Kec.%20Wonokromo%2C%20Surabaya%2C%20Jawa%20Timur%2060245!5e0!3m2!1sen!2sid!4v1675441372722!5m2!1sen!2sid"                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
             </div>
           </div>
         </div>
       </div>
       <hr>
-    </footer>
-
-    <div id="footer-bottom">
-      <div class="container">
-        <div class="d-flex align-items-center flex-wrap justify-content-between">
-          <div class="copyright">
-            <p>Freebies by <a href="https://templatesjungle.com/">Templates Jungle</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-            </p>
-          </div>
-          <div class="payment-method">
-            <p>Payment options :</p>
-            <div class="card-wrap">
-              <img src="images/visa-icon.jpg" alt="visa">
-              <img src="images/mastercard.png" alt="mastercard">
-              <img src="images/american-express.jpg" alt="american-express">
+      <div id="footer-bottom">
+        <div class="container">
+          <div class="d-flex align-items-center flex-wrap justify-content-between">
+            <div class="copyright">
+              <?php 
+                use Carbon\Carbon;   
+              ?>
+              <p>Copyright {{ Carbon::now()->format('Y') }} - <a style="color: white;" href="/">Microland Computer</a>
+              </p>
+              <br>
             </div>
+            {{-- <div class="payment-method">
+              <p>Payment options :</p>
+              <div class="card-wrap">
+                <img src="images/visa-icon.jpg" alt="visa">
+                <img src="images/mastercard.png" alt="mastercard">
+                <img src="images/american-express.jpg" alt="american-express">
+              </div>
+            </div> --}}
           </div>
         </div>
       </div>
-    </div>
+    </footer>
 
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Ambil semua elemen dengan class "item-anchor"
+      const menuItems = document.querySelectorAll('.item-anchor');
+
+      // Ambil pathname dari URL saat ini
+      const currentPath = window.location.pathname;
+
+      // Loop melalui setiap menu item untuk mencocokkan href
+      menuItems.forEach((item) => {
+        if (item.getAttribute('href') === currentPath) {
+          item.classList.add('active'); // Tambahkan class active
+        } else {
+          item.classList.remove('active'); // Hapus class active jika tidak cocok
+        }
+      });
+    </script>
   </body>
 </html>

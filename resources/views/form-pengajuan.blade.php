@@ -9,7 +9,7 @@
           <h2 class="page-title">Ajukan Sewa</h2>
           <div class="breadcrumbs">
             <span class="item">
-              <a href="index.html">Home /</a>
+              <a href="/">Home /</a>
             </span>
             <span class="item">Ajukan Sewa</span>
           </div>

@@ -14,3 +14,7 @@ Route::get('/ajukan-sewa', function () {
 Route::get('/katalog-perangkat', function () {
     return view('katalog-perangkat');
 });
+
+Route::get('/tentang-kami', function () {
+    return view('tentang-kami');
+});

@@ -944,7 +944,7 @@ img.single-image {
 }
 img.brand-image {
     max-width: 100%;
-    height: auto;
+    height: 130px;
     margin: 20px;
 }
 
@@ -1019,6 +1019,36 @@ img.image-circle {
     text-transform: none;
 }
 
+.sticky-button {
+  position: fixed; /* Menempel di layar */
+  bottom: 30px; /* Jarak dari bawah */
+  right: 40px; /* Jarak dari kanan */
+  width: 70px; /* Lebar tombol */
+  height: 70px; /* Tinggi tombol, sama dengan lebarnya */
+  background-color: var(--secondary-color); /* Warna latar belakang */
+  color: var(--light-color); /* Warna ikon */
+  border: none; /* Hilangkan border */
+  border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+  font-size: 20px; /* Ukuran ikon */
+  display: flex; /* Agar konten di dalam tombol terpusat */
+  align-items: center; /* Vertikal tengah */
+  justify-content: center; /* Horizontal tengah */
+  cursor: pointer; /* Pointer saat hover */
+  z-index: 1000; /* Di atas elemen lain */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efek interaksi */
+}
+
+.sticky-button:hover {
+  background-color: var(--primary-color); /* Warna berubah saat hover */
+  color: var(--light-color);
+  transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+.sticky-button i {
+  margin: 0; /* Pastikan ikon berada di tengah */
+}
+
 /*--- Section Title
 -----------------------------------------------*/
 .section-header {
@@ -1031,6 +1061,17 @@ img.image-circle {
     font-weight: 700;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px); /* Geser elemen ke bawah */
+  transition: all 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0); /* Kembali ke posisi asli */
+}
+
 /*--- Widget Title
 -----------------------------------------------*/
 h5.widget-title {
@@ -1039,6 +1080,7 @@ h5.widget-title {
     font-weight: 800;
     margin-top: 0;
     margin-bottom: 20px;
+    color: var(--light-color);
 }
 
 /*--- Product Title
@@ -2472,31 +2514,47 @@ a.blog-categories:hover{
 
 /*----- Footer Section
 --------------------------------------------------------------*/
+#footer {
+  background-color: var(--primary-color);
+}
 #footer .footer-menu {
+  padding-top: 30px;
     margin-right: 50px;
+    color: var(--light-color);
 }
 .footer-menu ul.menu-list a {
-    color: var(--accent-color);
+    color: var(--light-color);
 }
 .footer-menu ul.menu-list a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .footer-menu a.email {
-    color: var(--accent-color);
+    color: var(--light-color);
     text-decoration: underline;
     font-weight: 600;
 }
-.social-links li {
-    padding-right: 20px;
+.social-links i {
+  color: white; /* Mengubah warna ikon default menjadi putih */
+  transition: color 0.3s ease; /* Efek transisi saat hover */
+  padding-right: 20px;
+}
+1
+.social-links i:hover {
+  color: var(--secondary-color); /* Mengubah warna ikon saat hover, misalnya biru */
+}
+
+.fab.fa-whatsapp {
+    font-size: 22px;
 }
 
 /*----- Footer Bottom Section
 --------------------------------------------------------------*/
-#footer-bottom{
+/* #footer-bottom{
   margin-bottom: 30px;
-}
+} */
 #footer-bottom p{
     margin-bottom: 0;
+    color: var(--light-color);
 }
 .payment-method {
     display: flex;

@@ -16,10 +16,10 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-6">
-                    <h2 class="banner-title">Microland Computer</h2>
-                    <p>Dapatkan penawaran terbaik dari kami! Kami fokus melayani Sewa Laptop yang mencakup wilayah Surabaya dan sekitarnya. Solusi sewa laptop terbaik Anda!.</p>
-                    <div class="btn-wrap">
-                      <a href="shop.html" class="btn btn-secondary btn-medium d-flex align-items-center" tabindex="0">Hubungi Kami <i class="icon icon-arrow-io"></i>
+                    <h2 class="banner-title animate-on-scroll">Microland Computer</h2>
+                    <p class="animate-on-scroll">Dapatkan penawaran terbaik dari kami! Kami fokus melayani Sewa Laptop yang mencakup wilayah Surabaya dan sekitarnya. Solusi sewa laptop terbaik Anda!.</p>
+                    <div class="btn-wrap animate-on-scroll">
+                      <a href="shop.html" class="btn btn-secondary btn-medium d-flex align-items-center" tabindex="0">Ajukan Sewa <i class="icon icon-arrow-io"></i>
                       </a>
                     </div>
                   </div>
@@ -50,9 +50,9 @@
     <section id="shipping-information">
       <hr>
       <div class="container">
-        <h2 class="section-title">Mengapa Harus Memilih Kami?</h2>
+        <h2 class="section-title animate-on-scroll">Mengapa Harus Memilih Kami?</h2>
         <div class="row d-flex flex-wrap align-items-center justify-content-between">
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 animate-on-scroll">
             <div class="icon-box">
               <i class="icon icon-star-full"></i>
               <h4 class="block-title">
@@ -60,7 +60,7 @@
               </h4>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 animate-on-scroll">
             <div class="icon-box">
               <i class="icon icon-star-full"></i>
               <h4 class="block-title">
@@ -68,7 +68,7 @@
               </h4>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 animate-on-scroll">
             <div class="icon-box">
               <i class="icon icon-star-full"></i>
               <h4 class="block-title">
@@ -76,11 +76,11 @@
               </h4>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6 animate-on-scroll">
             <div class="icon-box">
               <i class="icon icon-star-full"></i>
               <h4 class="block-title">
-                <strong>Fleksibilitas Sewa</strong> Pilihan durasi sewa yang fleksibel, mulai dari harian, mingguan, hingga bulanan.
+                <strong>Fleksibilitas Sewa</strong> Pilihan durasi sewa yang fleksibel, mulai dari harian, bulanan, hingga tahunan.
               </h4>
             </div>
           </div>
@@ -254,7 +254,7 @@
     <section id="selling-products" class="product-store bg-light-grey padding-small">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Katalog Perangkat</h2>
+          <h2 class="section-title animate-on-scroll">Katalog Perangkat</h2>
         </div>
         {{-- <ul class="tabs list-unstyled">
           <li data-tab-target="#all" class="active tab">All</li>
@@ -269,7 +269,7 @@
         <div class="tab-content">
           <div id="all" data-tab-content class="active">
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/acer-swift-3-SF314-43.png" alt="Books" class="product-image">
                 </div>
@@ -286,7 +286,7 @@
                   <div class="item-price text-primary">Rp. 150.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/asus-vivobook-A1404VA.jpg" alt="Books" class="product-image">
                 </div>
@@ -303,7 +303,7 @@
                   <div class="item-price text-primary">Rp. 125.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/dell-inspiron-16-plus.jpg" alt="Books" class="product-image">
                 </div>
@@ -320,7 +320,7 @@
                   <div class="item-price text-primary">Rp. 100.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/hp-spectre-x360.png" alt="Books" class="product-image">
                 </div>
@@ -337,7 +337,7 @@
                   <div class="item-price text-primary">Rp. 110.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
                 </div>
@@ -354,7 +354,7 @@
                   <div class="item-price text-primary">Rp. 110.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
                 </div>
@@ -371,7 +371,7 @@
                   <div class="item-price text-primary">Rp. 110.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
                 </div>
@@ -388,7 +388,7 @@
                   <div class="item-price text-primary">Rp. 110.000 / Hari</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
                 </div>
@@ -406,13 +406,13 @@
                 </div>
               </div>
               <div style="display: flex; justify-content: center; width: 100%;">
-                <button href= "" type="button" class="btn btn-primary btn-medium">Lihat Selengkapnya</button>
+                <a href= "/katalog-perangkat" type="button" class="btn btn-primary btn-medium animate-on-scroll">Lihat Selengkapnya</a>
               </div>                             
             </div>
           </div>
           <div id="shoes" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products13.jpg" alt="Books" class="product-image">
                 </div>
@@ -429,7 +429,7 @@
                   <div class="item-price text-primary">$55.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products14.jpg" alt="Books" class="product-image">
                 </div>
@@ -446,7 +446,7 @@
                   <div class="item-price text-primary">$65.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products15.jpg" alt="Books" class="product-image">
                 </div>
@@ -463,7 +463,7 @@
                   <div class="item-price text-primary">$80.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products16.jpg" alt="Books" class="product-image">
                 </div>
@@ -484,7 +484,7 @@
           </div>
           <div id="tshirts" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products3.jpg" alt="Books" class="product-image">
                 </div>
@@ -501,7 +501,7 @@
                   <div class="item-price text-primary">$35.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products8.jpg" alt="Books" class="product-image">
                 </div>
@@ -518,7 +518,7 @@
                   <div class="item-price text-primary">$30.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products5.jpg" alt="Books" class="product-image">
                 </div>
@@ -535,7 +535,7 @@
                   <div class="item-price text-primary">$40.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products7.jpg" alt="Books" class="product-image">
                 </div>
@@ -556,7 +556,7 @@
           </div>
           <div id="pants" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products1.jpg" alt="Books" class="product-image">
                 </div>
@@ -573,7 +573,7 @@
                   <div class="item-price text-primary">$40.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products4.jpg" alt="Books" class="product-image">
                 </div>
@@ -590,7 +590,7 @@
                   <div class="item-price text-primary">$30.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products7.jpg" alt="Books" class="product-image">
                 </div>
@@ -607,7 +607,7 @@
                   <div class="item-price text-primary">$40.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products2.jpg" alt="Books" class="product-image">
                 </div>
@@ -628,7 +628,7 @@
           </div>
           <div id="hoodie" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products17.jpg" alt="Books" class="product-image">
                 </div>
@@ -645,7 +645,7 @@
                   <div class="item-price text-primary">$40.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products4.jpg" alt="Books" class="product-image">
                 </div>
@@ -662,7 +662,7 @@
                   <div class="item-price text-primary">$45.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products18.jpg" alt="Books" class="product-image">
                 </div>
@@ -683,7 +683,7 @@
           </div>
           <div id="outer" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products3.jpg" alt="Books" class="product-image">
                 </div>
@@ -700,7 +700,7 @@
                   <div class="item-price text-primary">$ 35.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products4.jpg" alt="Books" class="product-image">
                 </div>
@@ -717,7 +717,7 @@
                   <div class="item-price text-primary">$ 30.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products6.jpg" alt="Books" class="product-image">
                 </div>
@@ -734,7 +734,7 @@
                   <div class="item-price text-primary">$ 30.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products7.jpg" alt="Books" class="product-image">
                 </div>
@@ -755,7 +755,7 @@
           </div>
           <div id="jackets" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products5.jpg" alt="Books" class="product-image">
                 </div>
@@ -772,7 +772,7 @@
                   <div class="item-price text-primary">$40.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products2.jpg" alt="Books" class="product-image">
                 </div>
@@ -789,7 +789,7 @@
                   <div class="item-price text-primary">$35.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products6.jpg" alt="Books" class="product-image">
                 </div>
@@ -810,7 +810,7 @@
           </div>
           <div id="accessories" data-tab-content>
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products19.jpg" alt="Books" class="product-image">
                 </div>
@@ -827,7 +827,7 @@
                   <div class="item-price text-primary">$35.00</div>
                 </div>
               </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
                 <div class="image-holder">
                   <img src="images/selling-products20.jpg" alt="Books" class="product-image">
                 </div>
@@ -853,15 +853,14 @@
     <section id="brand-collection" class="bg-light-grey no-padding-bottom">
       <div class="container">
         <center>
-          <h2 class="section-title">Klien-Klien Kami</h2>
-          <div class="d-flex flex-wrap justify-content-between">
-            <img src="images/brand1.png" alt="phone" class="brand-image">
-            <img src="images/brand2.png" alt="phone" class="brand-image">
-            <img src="images/brand3.png" alt="phone" class="brand-image">
-            <img src="images/brand4.png" alt="phone" class="brand-image">
-            <img src="images/brand5.png" alt="phone" class="brand-image">
-            <img src="images/brand1.png" alt="phone" class="brand-image">
-            <img src="images/brand2.png" alt="phone" class="brand-image">
+          <h2 class="section-title animate-on-scroll">Klien-Klien Kami</h2>
+          <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <img src="asset-images/bkn.png" alt="phone" class="brand-image animate-on-scroll">
+            <img src="asset-images/spil.png" alt="phone" class="brand-image animate-on-scroll">
+            <img src="asset-images/samator.jpg" alt="phone" class="brand-image animate-on-scroll">
+            {{-- <img src="asset-images/bkn.png" alt="phone" class="brand-image animate-on-scroll">
+            <img src="asset-images/spil.png" alt="phone" class="brand-image animate-on-scroll">
+            <img src="asset-images/samator.jpg" alt="phone" class="brand-image animate-on-scroll"> --}}
           </div>
         </center>
       </div>
@@ -870,12 +869,12 @@
     <section id="testimonials" class="padding-small">
       <div class="container">
         <center>
-        <h2 class="section-title">Testimoni</h2>
+        <h2 class="section-title animate-on-scroll">Testimoni</h2>
       </center>
         <div class="reviews-content">
           <div class="row d-flex flex-wrap">
             <div class="col-md-2">
-              <div class="review-icon">
+              <div class="review-icon animate-on-scroll">
                 <i class="icon icon-right-quote"></i>
               </div>
             </div>
@@ -883,21 +882,36 @@
               <div class="swiper testimonial-swiper overflow-hidden">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="testimonial-detail">
-                      <p>“Dignissim massa diam elementum habitant fames. Id nullam pellentesque nisi, eget cursus dictumst pharetra, sit. Pulvinar laoreet id porttitor egestas dui urna. Porttitor nibh magna dolor ultrices iaculis sit iaculis.”</p>
+                    <div class="testimonial-detail animate-on-scroll">
+                      <p>“Microland telah menjadi mitra terpercaya kami dalam memenuhi kebutuhan perangkat IT. 
+                        Laptop yang kami sewa selalu dalam kondisi prima, performanya sangat mendukung produktivitas tim kami. 
+                        Layanan yang diberikan juga sangat profesional dan responsif. 
+                        Kami sangat merekomendasikan Microland untuk kebutuhan sewa perangkat IT.”</p>
                       <div class="author-detail">
-                        <div class="name">Maggie Rio - Direktur Ipsum</div>
+                        <div class="name">Dedy Setiawan - Chief IT PT. Samator</div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="testimonial-detail">
-                      <p>“Dignissim massa diam elementum habitant fames. Id nullam pellentesque nisi, eget cursus dictumst pharetra, sit. Pulvinar laoreet id porttitor egestas dui urna. Porttitor nibh magna dolor ultrices iaculis sit iaculis.”</p>
+                      <p>“Microland memberikan solusi terbaik untuk kebutuhan sewa laptop dalam event dan operasional kami. 
+                        Proses penyewaan sangat mudah, dan perangkat yang disediakan sesuai dengan spesifikasi yang kami butuhkan. 
+                        Tim support mereka selalu siap membantu jika ada kendala. Layanan seperti ini sangat memudahkan bisnis kami!”</p>
                       <div class="author-detail">
-                        <div class="name">John Smith - CEO Lorem</div>
+                        <div class="name">PT. SPIL</div>
                       </div>
                     </div>
                   </div>
+                  <div class="swiper-slide">
+                    <div class="testimonial-detail">
+                      <p>“Kami sangat puas dengan layanan dari Microland. Laptop yang kami sewa mendukung kelancaran pelaksanaan kegiatan internal dan program pelatihan. 
+                        Kondisi perangkat sangat baik, dan tim Microland selalu memastikan semuanya berjalan lancar. 
+                        Pelayanan yang ramah dan profesional membuat kami tidak ragu untuk menggunakan jasa mereka kembali.”</p>
+                      <div class="author-detail">
+                        <div class="name">Badan Kepegawaian Negara (BKN) Regional Surabaya</div>
+                      </div>
+                    </div>
+                  </div>  
                 </div>
               </div>
               <div class="swiper-arrows">
@@ -1170,7 +1184,7 @@
             <div class="col-lg-6 col-md-5 col-sm-6 product-entry">
               <h1 class="primary">Selesaikan Kebutuhan Sewa Laptop Anda!</h1>
               <div class="btn-wrap">
-                <a href="shop.html" class="btn btn-secondary btn-small d-flex align-items-center" tabindex="0">Hubungi Kami <i class="icon icon-arrow-io"></i>
+                <a href="shop.html" class="btn btn-secondary btn-small d-flex align-items-center" tabindex="0">Ajukan Sewa <i class="icon icon-arrow-io"></i>
                 </a>
               </div>
             </div>
@@ -1178,4 +1192,31 @@
         </div>        
       </div>
     </section>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Atur opsi Intersection Observer
+      const observerOptions = {
+        root: null, // viewport browser
+        threshold: 0.1, // 10% dari elemen harus terlihat sebelum class ditambahkan
+      };
+
+      // Callback untuk Observer
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view"); // Tambahkan class `in-view`
+            observer.unobserve(entry.target); // Stop mengamati elemen yang sudah terlihat
+          }
+        });
+      };
+
+      // Buat Observer
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+      // Temukan elemen target
+      const targets = document.querySelectorAll(".animate-on-scroll");
+      targets.forEach(target => observer.observe(target)); // Amati setiap elemen
+    });
+    </script>
 @endsection
