@@ -2993,3 +2993,8 @@ section.categories .category-content a{
   min-height: 150px;
   max-height: 150px;
 }
+
+.product-processor {
+  padding: 0;
+  margin: 0;
+}

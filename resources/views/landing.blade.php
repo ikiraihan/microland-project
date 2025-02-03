@@ -269,146 +269,30 @@
         <div class="tab-content">
           <div id="all" data-tab-content class="active">
             <div class="row d-flex flex-wrap">
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/acer-swift-3-SF314-43.png" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
+              @foreach ($devices as $device)
+                  <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                      <div class="image-holder">
+                          {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
+                          <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
+                      </div>
+                      <div class="cart-concern">
+                          <div class="cart-button d-flex justify-content-between align-items-center">
+                              <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
+                              </button>
+                          </div>
+                      </div>
+                      <div class="product-detail">
+                          <h3 class="product-title">
+                              <a href="/ajukan-sewa">{{ $device->brand. ' ' .$device->model }}</a>
+                          </h3>
+                          <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
+                          <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+                      </div>
                   </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Acer Swift 3 SF314-43</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 150.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/asus-vivobook-A1404VA.jpg" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Asus Vivobook A1404VA</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 125.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/dell-inspiron-16-plus.jpg" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Dell Inspiron 16 Plus</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 100.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/hp-spectre-x360.png" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">HP Spectre x360</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 110.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Infinix Inbook X1</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 110.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Infinix Inbook X1</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 110.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Infinix Inbook X1</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 110.000 / Hari</div>
-                </div>
-              </div>
-              <div class="product-item col-lg-3 col-md-6 col-sm-6 animate-on-scroll">
-                <div class="image-holder">
-                  <img src="asset-images/infinix-inbook-x1.png" alt="Books" class="product-image">
-                </div>
-                <div class="cart-concern">
-                  <div class="cart-button d-flex justify-content-between align-items-center">
-                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="product-detail">
-                  <h3 class="product-title">
-                    <a href="single-product.html">Infinix Inbook X1</a>
-                  </h3>
-                  <div class="item-price text-primary">Rp. 110.000 / Hari</div>
-                </div>
-              </div>
+              @endforeach
               <div style="display: flex; justify-content: center; width: 100%;">
-                <a href= "/katalog-perangkat" type="button" class="btn btn-primary btn-medium animate-on-scroll">Lihat Selengkapnya</a>
-              </div>                             
-            </div>
+                <a href= "/katalog-perangkat" type="button" class="btn btn-primary btn-medium">Lihat Selengkapnya</a>
+              </div>  
           </div>
           <div id="shoes" data-tab-content>
             <div class="row d-flex flex-wrap">
@@ -1184,7 +1068,7 @@
             <div class="col-lg-6 col-md-5 col-sm-6 product-entry">
               <h1 class="primary">Selesaikan Kebutuhan Sewa Laptop Anda!</h1>
               <div class="btn-wrap">
-                <a href="shop.html" class="btn btn-secondary btn-small d-flex align-items-center" tabindex="0">Ajukan Sewa <i class="icon icon-arrow-io"></i>
+                <a href="/ajukan-sewa" class="btn btn-secondary btn-small d-flex align-items-center" tabindex="0">Ajukan Sewa <i class="icon icon-arrow-io"></i>
                 </a>
               </div>
             </div>
