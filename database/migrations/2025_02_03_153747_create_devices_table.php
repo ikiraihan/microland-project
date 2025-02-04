@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('processor_type')->nullable();
             $table->string('ram')->nullable();
             $table->string('storage')->nullable();
+            $table->string('slug')->nullable()->unique();
             $table->bigInteger('daily_rate')->nullable();
             $table->bigInteger('monthly_rate')->nullable();
             $table->bigInteger('yearly_rate')->nullable();

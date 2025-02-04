@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DevicesTableSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 3000000,
                 'yearly_rate' => 6000000,
                 'units_available' => 100,
+                'slug' => Str::slug('Dell Latitude 5320 2in1 Touchscreen i5-11 16GB 256GB'),
             ],
             [
                 'brand' => 'Dell',
@@ -36,6 +38,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 3300000,
                 'yearly_rate' => 6300000,
                 'units_available' => 500,
+                'slug' => Str::slug('Dell Latitude 5320 Touchscreen i7-11 16GB 256GB'),
             ],
             [
                 'brand' => 'Dell',
@@ -47,6 +50,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2400000,
                 'yearly_rate' => 4600000,
                 'units_available' => 50,
+                'slug' => Str::slug('Dell Latitude 5400 Touchscreen i5-8 16GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -58,6 +62,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2400000,
                 'yearly_rate' => 4600000,
                 'units_available' => 20,
+                'slug' => Str::slug('Lenovo Thinkpad T490 Touchscreen i5-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -69,6 +74,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2600000,
                 'yearly_rate' => 5000000,
                 'units_available' => 50,
+                'slug' => Str::slug('Lenovo Thinkpad T480 Double VGA i7-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -80,6 +86,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 1800000,
                 'yearly_rate' => 3500000,
                 'units_available' => 300,
+                'slug' => Str::slug('Lenovo Thinkpad T470s Keyboard Backlight i5-6 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -91,6 +98,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 1800000,
                 'yearly_rate' => 3500000,
                 'units_available' => 300,
+                'slug' => Str::slug('Lenovo Thinkpad T460s Keyboard Backlight i5-6 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -102,6 +110,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2000000,
                 'yearly_rate' => 3800000,
                 'units_available' => 150,
+                'slug' => Str::slug('Lenovo Thinkpad L470 i5-7 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -113,6 +122,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 1800000,
                 'yearly_rate' => 3500000,
                 'units_available' => 50,
+                'slug' => Str::slug('Lenovo Thinkpad L460 i5-6 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -124,6 +134,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 1800000,
                 'yearly_rate' => 3500000,
                 'units_available' => 100,
+                'slug' => Str::slug('Lenovo Thinkpad X270 i5-6 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -135,6 +146,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 1800000,
                 'yearly_rate' => 3500000,
                 'units_available' => 50,
+                'slug' => Str::slug('Lenovo Thinkpad T470 i5-6 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -146,6 +158,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2400000,
                 'yearly_rate' => 4600000,
                 'units_available' => 30,
+                'slug' => Str::slug('Lenovo Thinkpad X280 i5-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -157,6 +170,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2600000,
                 'yearly_rate' => 5000000,
                 'units_available' => 50,
+                'slug' => Str::slug('Lenovo Thinkpad t480S i7-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -168,6 +182,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2400000,
                 'yearly_rate' => 4600000,
                 'units_available' => 20,
+                'slug' => Str::slug('Lenovo Thinkpad L380 Yoga + Pen Stylus i5-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -179,6 +194,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2400000,
                 'yearly_rate' => 4600000,
                 'units_available' => 95,
+                'slug' => Str::slug('Lenovo Thinkpad L480 Tc & Non Tc i5-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -190,6 +206,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2400000,
                 'yearly_rate' => 4600000,
                 'units_available' => 60,
+                'slug' => Str::slug('Lenovo Thinkpad L490 Touchscreen i5-8 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -201,6 +218,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 3300000,
                 'yearly_rate' => 5900000,
                 'units_available' => 10,
+                'slug' => Str::slug('Lenovo Thinkpad L13 i3-11 8GB 256GB'),
             ],
             [
                 'brand' => 'Lenovo',
@@ -212,6 +230,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 3900000,
                 'yearly_rate' => 7500000,
                 'units_available' => 10,
+                'slug' => Str::slug('Lenovo Thinkpad L13 i5-10 8GB 256GB'),
             ],
             [
                 'brand' => 'HP',
@@ -223,6 +242,7 @@ class DevicesTableSeeder extends Seeder
                 'monthly_rate' => 2000000,
                 'yearly_rate' => 3800000,
                 'units_available' => 50,
+                'slug' => Str::slug('HP Elitebook 840 G4 i5-7 8GB 256GB'),
             ]
         ];
 

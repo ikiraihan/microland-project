@@ -573,6 +573,19 @@ form {
     display: none !important;
 }
 
+/* Menambahkan border tipis pada input tanggal */
+.date-input {
+  border: 1px solid #dadada; /* Garis tipis berwarna abu-abu */
+  padding: 9px; /* Ruang dalam untuk memperbaiki tampilan */
+  border-radius: 4px; /* Membuat sudut input lebih halus */
+}
+
+.date-input:focus {
+  border-color: var(--light-primary-color); /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+
 /* display flex utilities */
 .d-flex {
   display: -ms-flexbox !important;
