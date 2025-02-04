@@ -34,100 +34,108 @@
           <div id="all" data-tab-content class="active">
             <div class="row d-flex flex-wrap">
               @foreach ($devices as $device)
-                  <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                      <div class="image-holder">
-                          {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
-                          <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
-                      </div>
-                      <div class="cart-concern">
-                          <div class="cart-button d-flex justify-content-between align-items-center">
-                              <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                              </button>
-                          </div>
-                      </div>
-                      <div class="product-detail">
-                          <h3 class="product-title">
-                              <a href="/ajukan-sewa">{{ $device->brand. ' ' .$device->model }}</a>
-                          </h3>
-                          <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                          <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
-                      </div>
+              <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                <div class="image-holder">
+                    {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
+                    <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
+                </div>
+                <div class="cart-concern">
+                  <div class="cart-button d-flex justify-content-between align-items-center">
+                      <button type="button" class="btn-wrap cart-link d-flex align-items-center" 
+                              onclick="window.location.href='/ajukan-sewa?key={{ $device->slug }}'">
+                          Ajukan Sewa <i class="icon icon-arrow-io"></i>
+                      </button>
                   </div>
+                </div>                    
+                <div class="product-detail">
+                    <h3 class="product-title">
+                        <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
+                    </h3>
+                    <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
+                    <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+                </div>
+              </div>
               @endforeach
           </div>
         </div>      
         <div id="lenovo" data-tab-content>
           <div class="row d-flex flex-wrap">
             @foreach ($lenovoDevices as $device)
-                <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                    <div class="image-holder">
-                        {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
-                        <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
-                    </div>
-                    <div class="cart-concern">
-                        <div class="cart-button d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <h3 class="product-title">
-                            <a href="/ajukan-sewa">{{ $device->brand. ' ' .$device->model }}</a>
-                        </h3>
-                        <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                        <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
-                    </div>
+            <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="image-holder">
+                  {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
+                  <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
+              </div>
+              <div class="cart-concern">
+                <div class="cart-button d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn-wrap cart-link d-flex align-items-center" 
+                            onclick="window.location.href='/ajukan-sewa?key={{ $device->slug }}'">
+                        Ajukan Sewa <i class="icon icon-arrow-io"></i>
+                    </button>
                 </div>
+              </div>                    
+              <div class="product-detail">
+                  <h3 class="product-title">
+                      <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
+                  </h3>
+                  <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
+                  <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+              </div>
+          </div>
             @endforeach
           </div>
         </div>
         <div id="dell" data-tab-content>
           <div class="row d-flex flex-wrap">
             @foreach ($dellDevices as $device)
-                <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                    <div class="image-holder">
-                        {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
-                        <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
-                    </div>
-                    <div class="cart-concern">
-                        <div class="cart-button d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <h3 class="product-title">
-                            <a href="/ajukan-sewa">{{ $device->brand. ' ' .$device->model }}</a>
-                        </h3>
-                        <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                        <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
-                    </div>
+            <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="image-holder">
+                  {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
+                  <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
+              </div>
+              <div class="cart-concern">
+                <div class="cart-button d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn-wrap cart-link d-flex align-items-center" 
+                            onclick="window.location.href='/ajukan-sewa?key={{ $device->slug }}'">
+                        Ajukan Sewa <i class="icon icon-arrow-io"></i>
+                    </button>
                 </div>
+              </div>                    
+              <div class="product-detail">
+                  <h3 class="product-title">
+                      <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
+                  </h3>
+                  <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
+                  <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+              </div>
+          </div>
             @endforeach
           </div>
         </div>
         <div id="hp" data-tab-content>
           <div class="row d-flex flex-wrap">
             @foreach ($hpDevices as $device)
-                <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                    <div class="image-holder">
-                        {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
-                        <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
-                    </div>
-                    <div class="cart-concern">
-                        <div class="cart-button d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">Ajukan Sewa <i class="icon icon-arrow-io"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <h3 class="product-title">
-                            <a href="/ajukan-sewa">{{ $device->brand. ' ' .$device->model }}</a>
-                        </h3>
-                        <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                        <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
-                    </div>
+            <div class="product-item col-lg-3 col-md-6 col-sm-6">
+              <div class="image-holder">
+                  {{-- <img src="images/selling-products1.jpg" alt="Books" class="product-image"> --}}
+                  <img src="{{ asset(\App\Helpers\Functions::getFile($device->model)) }}" class="product-image">
+              </div>
+              <div class="cart-concern">
+                <div class="cart-button d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn-wrap cart-link d-flex align-items-center" 
+                            onclick="window.location.href='/ajukan-sewa?key={{ $device->slug }}'">
+                        Ajukan Sewa <i class="icon icon-arrow-io"></i>
+                    </button>
                 </div>
+              </div>                    
+              <div class="product-detail">
+                  <h3 class="product-title">
+                      <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
+                  </h3>
+                  <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
+                  <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+              </div>
+          </div>
             @endforeach
           </div>
         </div>

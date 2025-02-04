@@ -73,4 +73,19 @@ class Functions
         }
         return $path;
     }
+
+    public static function getDisplayRentalName($rentalType)
+    {
+        switch($rentalType){
+            case'daily':
+                return 'Harian';
+                break;
+            case'monthly':
+                return 'Bulanan';
+                break;
+            case'yearly':
+                return 'Tahunan';
+                break;
+        }
+    }
 }

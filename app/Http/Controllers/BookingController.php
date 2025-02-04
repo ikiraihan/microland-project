@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Functions;
 use App\Models\Booking;
 use App\Models\Device;
 use Illuminate\Http\Request;
+use App\Mail\BookingCreated;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -65,6 +69,26 @@ class BookingController extends Controller
             ];
     
             Booking::create($data);
+            
+            $device = Device::where('slug',$request->device_slug)->first();
+            $deviceName = $device->full_name_specification;
+
+            Carbon::setLocale('id');
+            $dataMail = [
+                'device' => $deviceName,
+                'company_name' => $request->company_name,
+                'company_address' => $request->company_address,
+                'person_name' => $request->person_name,
+                'phone_number' => $request->phone_number,
+                'email' => $request->email,
+                'rental_type' => Functions::getDisplayRentalName($request->rental_type),
+                'quantity' => $request->quantity,
+                'start_date' => $request->start_date ? Carbon::parse($request->start_date)->format('d F Y') : '-',
+                'end_date' => $request->end_date ? Carbon::parse($request->end_date)->format('d F Y') : '-',
+                'total_price' => $request->total_price,
+            ];
+
+            Mail::to('ikiraihann@gmail.com')->send(new BookingCreated($dataMail));
     
             // Kembalikan respon sukses
             return redirect()->back()->with('success', 'Pengajuan Anda berhasil terkirim. Kami akan segera menghubungi anda!');
