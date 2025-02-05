@@ -18,18 +18,54 @@
     </div>
   </section>
 
+  <style>
+    .tabs-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .tabs {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .tabs li {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  
+    .tabs li.active {
+      font-weight: bold;
+    }
+  
+    .device-select {
+      margin-left: auto;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #8d8d8d;
+      color: #002142;
+    }
+  </style>
+
   <section id="selling-products" class="product-store bg-light-grey padding-small">
     <div class="container">
-      <ul class="tabs list-unstyled">
-        <li data-tab-target="#all" class="active tab">All</li>
-        <li data-tab-target="#lenovo" class="tab">Lenovo</li>
-        <li data-tab-target="#dell" class="tab">Dell</li>
-        <li data-tab-target="#hp" class="tab">HP</li>
-        {{-- <li data-tab-target="#hoodie" class="tab">Merk 4</li>
-        <li data-tab-target="#outer" class="tab">Merk 4</li>
-        <li data-tab-target="#jackets" class="tab">Merk 4</li>
-        <li data-tab-target="#accessories" class="tab">Merk 5</li> --}}
-      </ul>
+      <div class="tabs-container">
+        <ul class="tabs list-unstyled">
+          <li data-tab-target="#all" class="active tab">All</li>
+          <li data-tab-target="#lenovo" class="tab">Lenovo</li>
+          <li data-tab-target="#dell" class="tab">Dell</li>
+          <li data-tab-target="#hp" class="tab">HP</li>
+        </ul>
+        <select class="device-select" id="device_slug" name="device_slug" onchange="updatePrices()">
+          <option value="daily" selected>Harian</option>
+          <option value="monthly">Bulanan</option>
+          <option value="yearly">Tahunan</option>
+        </select>
+      </div>
+
       <div class="tab-content">
           <div id="all" data-tab-content class="active">
             <div class="row d-flex flex-wrap">
@@ -52,7 +88,13 @@
                         <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
                     </h3>
                     <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                    <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+                    <div 
+                      class="item-price text-primary" 
+                      data-daily-rate="{{ $device->daily_rate }}" 
+                      data-monthly-rate="{{ $device->monthly_rate }}" 
+                      data-yearly-rate="{{ $device->yearly_rate }}">
+                      Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari
+                  </div>                
                 </div>
               </div>
               @endforeach
@@ -79,7 +121,13 @@
                       <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
                   </h3>
                   <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                  <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+                  <div 
+                    class="item-price text-primary" 
+                    data-daily-rate="{{ $device->daily_rate }}" 
+                    data-monthly-rate="{{ $device->monthly_rate }}" 
+                    data-yearly-rate="{{ $device->yearly_rate }}">
+                    Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari
+                  </div>  
               </div>
           </div>
             @endforeach
@@ -106,7 +154,13 @@
                       <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
                   </h3>
                   <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                  <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+                  <div 
+                    class="item-price text-primary" 
+                    data-daily-rate="{{ $device->daily_rate }}" 
+                    data-monthly-rate="{{ $device->monthly_rate }}" 
+                    data-yearly-rate="{{ $device->yearly_rate }}">
+                    Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari
+                  </div>  
               </div>
           </div>
             @endforeach
@@ -133,7 +187,13 @@
                       <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
                   </h3>
                   <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                  <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
+                  <div 
+                      class="item-price text-primary" 
+                      data-daily-rate="{{ $device->daily_rate }}" 
+                      data-monthly-rate="{{ $device->monthly_rate }}" 
+                      data-yearly-rate="{{ $device->yearly_rate }}">
+                      Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari
+                  </div>                
               </div>
           </div>
             @endforeach
@@ -215,4 +275,43 @@
     </div>
   </section>
 
+  <script>
+    function updatePrices() {
+      // Ambil nilai dari dropdown
+      const selectedRate = document.getElementById("device_slug").value;
+  
+      // Ambil semua elemen harga
+      const priceElements = document.querySelectorAll(".item-price");
+  
+      // Loop melalui elemen harga dan perbarui sesuai pilihan
+      priceElements.forEach((priceElement) => {
+        const dailyRate = priceElement.getAttribute("data-daily-rate");
+        const monthlyRate = priceElement.getAttribute("data-monthly-rate");
+        const yearlyRate = priceElement.getAttribute("data-yearly-rate");
+  
+        let newRate;
+        switch (selectedRate) {
+          case "daily":
+            newRate = dailyRate;
+            priceElement.textContent = `Rp. ${formatNumber(newRate)} / Hari`;
+            break;
+          case "monthly":
+            newRate = monthlyRate;
+            priceElement.textContent = `Rp. ${formatNumber(newRate)} / Bulan`;
+            break;
+          case "yearly":
+            newRate = yearlyRate;
+            priceElement.textContent = `Rp. ${formatNumber(newRate)} / Tahun`;
+            break;
+        }
+      });
+    }
+  
+    // Helper untuk memformat angka
+    function formatNumber(number) {
+      return new Intl.NumberFormat("id-ID", {
+        minimumFractionDigits: 0,
+      }).format(number);
+    }
+  </script>
 @endsection

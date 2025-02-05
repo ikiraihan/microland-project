@@ -49,8 +49,8 @@ class BookingController extends Controller
                 'email' => 'nullable|email',
                 'rental_type' => 'required|string|in:daily,monthly,yearly',
                 'quantity' => 'required|numeric',
-                'start_date' => 'required|date',
-                'end_date' => 'required|date',
+                'start_date' => 'nullable|date',
+                'end_date' => 'nullable|date',
                 'total_price' => 'nullable|numeric',
             ]);
     
