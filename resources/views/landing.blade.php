@@ -1,6 +1,15 @@
 @extends('sticky')
 
 @section('content')
+<style>
+      .device-select {
+      margin-left: auto;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #8d8d8d;
+      color: #002142;
+    }
+</style>
 <section id="billboard" class="overflow-hidden">
 
       {{-- <button class="button-prev">
@@ -253,9 +262,14 @@
 
     <section id="selling-products" class="product-store bg-light-grey padding-small">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header d-flex justify-content-between align-items-center">
           <h2 class="section-title animate-on-scroll">Katalog Perangkat</h2>
-        </div>
+          <select class="device-select" id="device_slug" name="device_slug" onchange="updatePrices()">
+            <option value="daily" selected>Harian</option>
+            <option value="monthly">Bulanan</option>
+            <option value="yearly">Tahunan</option>
+          </select>
+        </div>      
         {{-- <ul class="tabs list-unstyled">
           <li data-tab-target="#all" class="active tab">All</li>
           <li data-tab-target="#shoes" class="tab">Shoes</li>
@@ -266,7 +280,7 @@
           <li data-tab-target="#jackets" class="tab">Jackets</li>
           <li data-tab-target="#accessories" class="tab">Accessories</li>
         </ul> --}}
-        <div class="tab-content">
+        <div class="tab-content"> 
           <div id="all" data-tab-content class="active">
             <div class="row d-flex flex-wrap">
               @foreach ($devices as $device)
@@ -288,8 +302,14 @@
                               <a href="/ajukan-sewa?key={{ $device->slug }}">{{ $device->brand. ' ' .$device->model }}</a>
                           </h3>
                           <p class="product-processor">{{ $device->processor_type.' / '.$device->ram.' / '.$device->storage}}</p>
-                          <div class="item-price text-primary">Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari</div> <!-- Daily rate -->
-                      </div>
+                          <div 
+                          class="item-price text-primary" 
+                          data-daily-rate="{{ $device->daily_rate }}" 
+                          data-monthly-rate="{{ $device->monthly_rate }}" 
+                          data-yearly-rate="{{ $device->yearly_rate }}">
+                          Rp. {{ number_format($device->daily_rate, 0, ',', '.') }} / Hari
+                      </div>      
+                    </div>
                   </div>
               @endforeach
               <div style="display: flex; justify-content: center; width: 100%;">
@@ -1104,5 +1124,43 @@
       const targets = document.querySelectorAll(".animate-on-scroll");
       targets.forEach(target => observer.observe(target)); // Amati setiap elemen
     });
+
+    function updatePrices() {
+      // Ambil nilai dari dropdown
+      const selectedRate = document.getElementById("device_slug").value;
+  
+      // Ambil semua elemen harga
+      const priceElements = document.querySelectorAll(".item-price");
+  
+      // Loop melalui elemen harga dan perbarui sesuai pilihan
+      priceElements.forEach((priceElement) => {
+        const dailyRate = priceElement.getAttribute("data-daily-rate");
+        const monthlyRate = priceElement.getAttribute("data-monthly-rate");
+        const yearlyRate = priceElement.getAttribute("data-yearly-rate");
+  
+        let newRate;
+        switch (selectedRate) {
+          case "daily":
+            newRate = dailyRate;
+            priceElement.textContent = `Rp. ${formatNumber(newRate)} / Hari`;
+            break;
+          case "monthly":
+            newRate = monthlyRate;
+            priceElement.textContent = `Rp. ${formatNumber(newRate)} / Bulan`;
+            break;
+          case "yearly":
+            newRate = yearlyRate;
+            priceElement.textContent = `Rp. ${formatNumber(newRate)} / Tahun`;
+            break;
+        }
+      });
+    }
+  
+    // Helper untuk memformat angka
+    function formatNumber(number) {
+      return new Intl.NumberFormat("id-ID", {
+        minimumFractionDigits: 0,
+      }).format(number);
+    }
     </script>
 @endsection
