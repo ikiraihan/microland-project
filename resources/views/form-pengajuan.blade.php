@@ -84,7 +84,7 @@
                       required>
                   
                   <!-- Pesan error dengan style untuk warna merah dan jarak yang lebih baik -->
-                  <small id="quantity-error" class="text-danger" style="display:none; margin-top: 0px;">Jumlah yang dimasukkan melebihi stok yang tersedia.</small>
+                  <small id="quantity-error" class="text-danger" style="display:none; margin-top: 0px;"></small>              
               </div>
           </div>          
             <div class="row">
@@ -176,8 +176,9 @@
 
         // Cek apakah quantity lebih besar dari units_available
         if (parseInt(quantity) > parseInt(unitsAvailable)) {
-            // Tampilkan pesan error dan beri warna merah
+            // Tampilkan pesan error dengan stok yang tersedia
             errorElement.style.display = 'block';
+            errorElement.innerHTML = `Jumlah yang dimasukkan melebihi stok yang tersedia. Stok saat ini: ${unitsAvailable}.`;
         } else {
             // Sembunyikan pesan error jika valid
             errorElement.style.display = 'none';

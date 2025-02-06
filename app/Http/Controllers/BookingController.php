@@ -88,7 +88,7 @@ class BookingController extends Controller
                 'total_price' => $request->total_price,
             ];
 
-            Mail::to('ikiraihann@gmail.com')->send(new BookingCreated($dataMail));
+            Mail::to(env('MAIL_TO_ADDRESS'))->send(new BookingCreated($dataMail));
     
             // Kembalikan respon sukses
             return redirect()->back()->with('success', 'Pengajuan Anda berhasil terkirim. Kami akan segera menghubungi anda!');

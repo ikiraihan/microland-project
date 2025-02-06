@@ -10,7 +10,8 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('asset-images/microland.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('asset-images/microland.png') }}">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('icomoon/icomoon.css') }}">
